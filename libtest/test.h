@@ -1,6 +1,11 @@
 #ifndef _TEST_H_
 #define _TEST_H_
 
+#if defined(__cplusplus)
+extern "C"
+{
+#endif 
+
 #include "test_version.h"
 #include "test_error.h"
 
@@ -17,10 +22,13 @@ typedef test_ctx_s   test_ctx_t;
 
 
 /*interface function*/
-int test_init(test_ctx_t *ctx); 
+extern int test_init(test_ctx_t *ctx); 
 
-int test_unit(test_ctx_t *ctx);
+extern int test_unit(test_ctx_t *ctx);
 
 
+#if defined(__cplusplus)
+}
+#endif
 
 #endif //_TEST_H_
